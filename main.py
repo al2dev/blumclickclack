@@ -15,7 +15,7 @@ async def capture(img, cor_x, cor_y):
     global ROOT_DIR
     img = os.path.join(ROOT_DIR, img)
     pattern = cv2.imread(img)
-    x1, y1, width, height = 0, 50, 375, 650
+    x1, y1, width, height = 0, 100, 375, 550
 
     while True:
         screenshot = pyautogui.screenshot(region=(x1, y1, width, height))
@@ -42,7 +42,7 @@ def t_capture(img, cor_x, cor_y):
     global ROOT_DIR
     img = os.path.join(ROOT_DIR, img)
     pattern = cv2.imread(img)
-    x1, y1, width, height = 0, 50, 375, 650
+    x1, y1, width, height = 0, 100, 375, 550
 
     while True:
         screenshot = pyautogui.screenshot(region=(x1, y1, width, height))
