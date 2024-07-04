@@ -4,7 +4,11 @@
 - скачать и установить Python 3.12
 - скачать данный проект в виде архива
 - разархивировать проект в папку, так что бы в пути к папке не было символов на кирилице
-- запустить командную строку и выполнить команду ```C:\Users\user\AppData\Roaming\Python\Python312\python.exe C:\Users\user\blum_clicker\main.py``` 
+- запустить командную строку и выполнить команду 
+```C:\Users\user\AppData\Roaming\Python\Python312\python.exe -m pip install -r C:\Users\user\blum_clicker\requirements.txt``` 
+  - ```C:\Users\user\AppData\Roaming\Python\Python312\python.exe``` - путь к установленному приложению
+  - ```C:\Users\user\blum_clicker\requirements.txt``` - путь к файлу проекта
+- теперь для запуска кликера достаточно выполнить команду ```C:\Users\user\AppData\Roaming\Python\Python312\python.exe C:\Users\user\blum_clicker\main.py``` 
   - ```C:\Users\user\AppData\Roaming\Python\Python312\python.exe``` - путь к установленному приложенияю
   - ```C:\Users\user\blum_clicker\main.py``` - путь к файлу проекта
 
