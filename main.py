@@ -15,7 +15,7 @@ async def capture(img, cor_x, cor_y):
     global ROOT_DIR
     img = os.path.join(ROOT_DIR, img)
     pattern = cv2.imread(img)
-    x1, y1, width, height = 0, 0, 375, 650
+    x1, y1, width, height = 0, 50, 375, 650
 
     while True:
         screenshot = pyautogui.screenshot(region=(x1, y1, width, height))
@@ -32,7 +32,7 @@ async def capture(img, cor_x, cor_y):
             #bottom_right = (top_left[0] + pattern.shape[1], top_left[1] + pattern.shape[0])
             x, y = top_left[0], top_left[1]
             ux, uy = pyautogui.position()
-            pyautogui.click(x + cor_x, y + cor_y)  
+            pyautogui.click(x + cor_x + x1, y + cor_y + y1)
             pyautogui.moveTo(ux, uy)
 
         await asyncio.sleep(0.010)
@@ -42,7 +42,7 @@ def t_capture(img, cor_x, cor_y):
     global ROOT_DIR
     img = os.path.join(ROOT_DIR, img)
     pattern = cv2.imread(img)
-    x1, y1, width, height = 0, 0, 375, 650
+    x1, y1, width, height = 0, 50, 375, 650
 
     while True:
         screenshot = pyautogui.screenshot(region=(x1, y1, width, height))
@@ -59,7 +59,7 @@ def t_capture(img, cor_x, cor_y):
             #bottom_right = (top_left[0] + pattern.shape[1], top_left[1] + pattern.shape[0])
             x, y = top_left[0], top_left[1]
             ux, uy = pyautogui.position()
-            pyautogui.click(x + cor_x, y + cor_y)
+            pyautogui.click(x + cor_x + x1, y + cor_y + y1)
             pyautogui.moveTo(ux, uy)
         time.sleep(0.010)
 
